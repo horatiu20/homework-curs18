@@ -1,5 +1,6 @@
 package ro.fasttrackit.homework.countries;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,6 +16,7 @@ public class CountryReader {
 		List<Country> countries = readFromFile();
 	}
 
+	@GetMapping
 	public static List<Country> readFromFile() throws Exception {
 		List<Country> countries = new ArrayList<>();
 		BufferedReader fileReader = new BufferedReader(new FileReader("src/main/resources/countries.txt"));
