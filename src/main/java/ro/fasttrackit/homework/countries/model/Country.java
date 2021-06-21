@@ -1,4 +1,4 @@
-package ro.fasttrackit.homework.countries;
+package ro.fasttrackit.homework.countries.model;
 
 import java.util.Objects;
 
@@ -6,12 +6,12 @@ public class Country {
 	private final int id;
 	private final String name;
 	private final String capital;
-	private final int population;
+	private final long population;
 	private final int area;
 	private final String continent;
 	private final String neighbours;
 
-	public Country(int id, String name, String capital, int population, int area, String continent, String neighbours) {
+	public Country(int id, String name, String capital, long population, int area, String continent, String neighbours) {
 		this.id = id;
 		this.name = name;
 		this.capital = capital;
@@ -33,7 +33,7 @@ public class Country {
 		return capital;
 	}
 
-	public int getPopulation() {
+	public long getPopulation() {
 		return population;
 	}
 
