@@ -61,7 +61,7 @@ public class CountryController {
 		return countryService.mapCountryToPopulation();
 	}
 
-	@GetMapping("/countries/countries")
+	@GetMapping("/continents/countries")
 	Map<String, List<Country>> mapContinentToCountries() {
 		return countryService.mapContinentToCountries();
 	}
