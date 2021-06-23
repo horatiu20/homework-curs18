@@ -1,9 +1,6 @@
 package ro.fasttrackit.homework.countries.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import ro.fasttrackit.homework.countries.model.Country;
 import ro.fasttrackit.homework.countries.service.CountryService;
 
@@ -52,7 +49,7 @@ public class CountryController {
 	}
 
 	@GetMapping("/continents/{continentName}/countries?minPopulation={minimumPopulation}")
-	List<Country> getCountryBasedOnPopulation(@PathVariable String continentName, @PathVariable long minimumPopulation) {
+	List<Country> getCountryBasedOnPopulation(@PathVariable String continentName, @RequestParam(required = false) long minimumPopulation) {
 		return countryService.getCountryBasedOnPopulation(continentName, minimumPopulation);
 	}
 

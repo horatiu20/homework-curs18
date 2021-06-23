@@ -76,8 +76,8 @@ public class CountryService {
 
 	public List<Country> getCountryBasedOnPopulation(String continentName, long minimumPopulation) {
 		return countries.stream()
-				.filter(country -> country.getContinent().equalsIgnoreCase(continentName))           //ceva nu merge aici, orice valoare minima introduc
-				.filter(country -> country.getPopulation() >= minimumPopulation)                    //imi arata toate tarile... oare nu recunoaște valoarea ca "long" ?
+				.filter(country -> country.getContinent().equalsIgnoreCase(continentName))
+				.filter(country -> country.getPopulation() >= minimumPopulation)
 				.collect(toList());
 	}
 
