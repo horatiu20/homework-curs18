@@ -40,7 +40,6 @@ public class CountryController {
 	@GetMapping("/continents/{continentName}/countries")
 	List<Country> getCountriesInContinent(@PathVariable String continentName) {
 		return countryService.getCountriesInContinent(continentName);
-
 	}
 
 	@GetMapping("/countries/{countryId}/neighbours")
